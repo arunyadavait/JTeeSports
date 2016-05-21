@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="Modern-Slider" class="Modern-Slider">
+    <!-- Item -->
+    <div class="item">
+        <div class="img-fill">
+            <img src="~/Images/Chrysanthemum.jpg" alt="">
+            <div class="info">
+                <div>
+                    <h3>Enter the Heading Text</h3>
+                    <h5>Enter the Sub Text</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Item -->
+    <!-- Item -->
+    <div class="item">
+        <div class="img-fill">
+            <img src="~/Images/Desert.jpg" alt="">
+            <div class="info">
+                <div>
+                    <h3>Enter the Heading Text</h3>
+                    <h5>Enter the Sub Text</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Item -->
+    <!-- Item -->
+    <div class="item">
+        <div class="img-fill">
+            <img src="~/Images/Hydrangeas.jpg" alt="">
+            <div class="info">
+                <div>
+                    <h3>Enter the Heading Text</h3>
+                    <h5>Enter the Sub Text</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Item -->
+    <!-- Item -->
+    <div class="item">
+        <div class="img-fill">
+            <img src="~/Images/Jellyfish.jpg" alt="">
+            <div class="info">
+                <div>
+                    <h3>Enter the Heading Text</h3>
+                    <h5>Enter the Sub Text</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Item -->
+</section>
+@*slider*@
+
+
+<section id="parallax" class="parallax">
+    <h2 class="parallax text-center">Parallax Effect</h2>
+</section>
+@*parallax *@
+
+
+@*<section id="bg-video">
+    <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+          <source src="../video/space2.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>*@
+@*Background video*@
+
+<section id="Categories">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <h1 id ="headingCategories" class="text-center"><b> Categories</b></h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-md-3">
+                <div class="circle-avatar" style="background-image: url(../Images/men.jpg)">
+                </div>
+                <h2 class="categoryTitle"><span><b> Men</b></span></h2>
+            </div>
+
+            <div class="col-xs-1 col-md-1"></div>
+            <div class="col-xs-3 col-md-3">
+                <div class="circle-avatar" style="background-image: url(../Images/women.jpg)">
+                </div>
+                   <h2 class="categoryTitle"><span><b>Women</b></span></h2>
+
+            </div>
+            <div class="col-xs-1 col-md-1"></div>
+            <div class="col-xs-3 col-md-3">
+                <div class="circle-avatar" style="background-image: url('../Images/kids.jpg')">
+                </div>
+                   <h2 class="categoryTitle"><span><b>Kids</b></span></h2>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<div>
+
+    <h1 id="two">Section Two</h1>
+
+    <p><a href="#top">Top</a></p>
+
+
+    <h1 id="three">Section Three</h1>
+
+    <p><a href="#top">Top</a></p>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".Modern-Slider").slick({
+            autoplay: true,
+            autoplaySpeed: 10000,
+            speed: 600,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            pauseOnHover: false,
+            dots: true,
+            pauseOnDotsHover: true,
+            cssEase: 'linear',
+            arrows: true,
+            // fade:true,
+            draggable: false,
+            prevArrow: '<button class="PrevArrow"></button>',
+            nextArrow: '<button class="NextArrow"></button>',
+
+        });
+
+        $('#Categories').waypoint({
+            handler: function () {
+
+                $('#Categories .circle-avatar').addClass('animated slideInUp');
+
+                console.log($(this.element));
+            }
+        }, { offset: '100%' });
+
+
+    });
+</script>

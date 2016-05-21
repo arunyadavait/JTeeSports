@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Puma</title>
+   
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />    
+    <link href="~/Content/PumaStyles.css" rel="stylesheet" />
+    <link href="~/Content/Slick/slick.css" rel="stylesheet" />
+    <link href="~/Content/Slick/slick-theme.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.3.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/Slick/slick.js"></script>
+    <script src="~/Scripts/jquery.waypoints.js"></script>
+    <script src="~/Scripts/noframework.waypoints.js"></script>
+    <script src="~/Scripts/PumaScript.js"></script>
+
+    @*<script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+
+                // hide .navbar first
+                //   $(".navbar").hide();
+
+                // fade in .navbar
+                $(function () {
+                    $(window).scroll(function () {
+
+                        // set distance user needs to scroll before we start fadeIn
+                        if ($(this).scrollTop() < 100) {
+                            $('.navbar').fadeIn("slow", "swing");
+                        } else {
+                            $('.navbar').fadeOut("slow", "swing");
+                        }
+                    });
+                });
+
+            });
+
+        }(jQuery));
+    </script>*@
+    @*navbar scroll disappearing *@
+
+
+
+</head>
+<body style="background-image: url(../Images/BgImage.jpg)">
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="width:200px;"><img src="/Images/jtee logo.jpg" style="width: 100px;height: 100px;float:left"><label style="margin-left:10px">Sports</label></a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        @*<li><a href="#">Women</a></li>
+                        <li><a href="#">Find a Store</a></li>*@
+                        <li><a href="#">About</a></li>
+                        @*<li><a href="#">Contact Us</a></li>*@
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                       <div class="form-group">
+                           <div class="">
+                               <label>Contact Us</label>
+                           </div>
+                       </div>
+                    </div>                    
+                    @*<form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" placeholder="Email" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Pasword" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign In</button>
+                    </form>*@
+                </div>
+
+            </div>
+        </nav>
+        @* navbar ending*@
+    </header>
+
+    <div id="body">
+
+        
+        <div>
+
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+
+
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year &acirc;&euro;&ldquo; Code Express</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
